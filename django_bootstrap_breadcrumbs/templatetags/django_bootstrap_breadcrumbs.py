@@ -38,14 +38,15 @@ CONTEXT_KEY = 'DJANGO_BREADCRUMB_LINKS'
 
 
 def log_request_not_found():
-    if VERSION < (1, 8):  # pragma: nocover
-        logger.error("request object not found in context! Check if "
-                     "'django.core.context_processors.request' is in "
-                     "TEMPLATE_CONTEXT_PROCESSORS")
-    else:  # pragma: nocover
-        logger.error("request object not found in context! Check if "
-                     "'django.template.context_processors.request' is in the "
-                     "'context_processors' option of your template settings.")
+    # if VERSION < (1, 8):  # pragma: nocover
+    #     logger.error("request object not found in context! Check if "
+    #                  "'django.core.context_processors.request' is in "
+    #                  "TEMPLATE_CONTEXT_PROCESSORS")
+    # else:  # pragma: nocover
+    #     logger.error("request object not found in context! Check if "
+    #                  "'django.template.context_processors.request' is in the "
+    #                  "'context_processors' option of your template settings.")
+    pass
 
 
 def requires_request(func):
